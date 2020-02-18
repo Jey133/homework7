@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>homework7</title>
+</head>
+<body>
+	<script>
+		
+	function padStringTest (initialStr, strToAdd, targetLength, isRight = true) {
+		if(typeof initialStr !== "undefined" && typeof strToAdd !== "undefined" && typeof targetLength !== "undefined" && targetLength > initialStr.length) {
+			let index = 0;
+			do{
+				if(index >= strToAdd.length) {
+					index = 0;
+				}
+				if(isRight === true){
+					initialStr = initialStr + strToAdd[index];
+				} else {
+					initialStr = strToAdd[index] + initialStr;
+				}
+				index++;
+			}while(initialStr.length < targetLength);
+			return initialStr;
+		} else {
+			return initialStr;
+		}
+	}
+
+	</script>
+</body>
+</html>
